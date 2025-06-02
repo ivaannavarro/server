@@ -37,7 +37,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/citas', citasRoutes);
 app.use('/api/specialty', specialtyRoutes);
 
-// En producción, servir archivos estáticos del frontend
+/* En producción, servir archivos estáticos del frontend
 if (process.env.NODE_ENV === 'production') {
   const frontendPath = path.join(__dirname, '../frontend/dist');
   
@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get('/*', (req, res) => {
     res.sendFile(path.join(frontendPath, 'index.html'));
   });
-}
+}*/
 
 // Middleware de manejo de errores
 app.use((err, req, res, next) => {
